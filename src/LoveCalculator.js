@@ -103,10 +103,11 @@ const LoveCalculator = () => {
           value={lover2}
           onChange={(e) => setLover2(e.target.value)}
         />
-        <button onClick={handleButtonClick}>
+        <button onClick={()=>{lover1 && lover2 && handleButtonClick();}}>
           {relationshipStatus !== null ? 'Reset' : 'Generate Flames'}
         </button>
       </div>
+      {lover1&&lover2&&
       <animated.div className="result-container" style={fadeProps}>
         {relationshipStatus && (
           <div>
@@ -116,6 +117,7 @@ const LoveCalculator = () => {
           </div>
         )}
       </animated.div>
+}
     </div>
   );
 };
