@@ -1,0 +1,105 @@
+/* LoveCalculator.css */
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #ff4081, #ffffff);
+}
+
+.love-calculator-container {
+  /* height:100%; */
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  margin-top:40vh;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+.result-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e1bee7;
+  border-radius: 8px;
+}
+
+.heart-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heart-background .heart {
+  font-size: 20px;
+  position: absolute;
+  content: '❤️';
+  animation: heart-move 8s linear infinite;
+}
+
+@keyframes heart-move {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Additional styles for hearts covering the entire background */
+.heart-background .heart-covering {
+  position: absolute;
+  content: '❤️';
+  font-size: 20px;
+  animation: heart-move 8s linear infinite;
+}
+
+.input-text-container-box{
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
